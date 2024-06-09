@@ -43,8 +43,8 @@
     "web-vitals": "^2.1.4"
   },
   "scripts": {
-    "start": "PUBLIC_URL=/ react-scripts start",
-    "build": "rm -rf dist && NODE_ENV=production babel src/lib --out-dir dist/esm --copy-files --config-file ./babel.config.esm.json && NODE_ENV=production babel src/lib --out-dir dist/cjs --copy-files --config-file ./babel.config.cjs.json",
+    "start": "node api.js && PUBLIC_URL=/ react-scripts start",
+    "build": "node api.js && rm -rf dist && NODE_ENV=production babel src/lib --out-dir dist/esm --copy-files --config-file ./babel.config.esm.json && NODE_ENV=production babel src/lib --out-dir dist/cjs --copy-files --config-file ./babel.config.cjs.json",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
   },
